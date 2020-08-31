@@ -1,9 +1,104 @@
 // Apply a natural box layout model to all elements
 // but allowing components to change
 // http://www.paulirish.com/2012/box-sizing-border-box-ftw/
-html {
+
+@import "./mixins";
+@import "./variables";
+
+//Global
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
-*, *:before, *:after {
-    box-sizing: inherit;
+
+.center-wrapper {
+    max-width: 1360px;
+    margin: 0 auto;
+    padding: 0 $small;
+}
+//Navbar
+.navbar {
+    display: flex;
+    height: 61px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar__logo {
+    width: 33px;
+    height: auto;
+}
+
+.navbar__burger-menu {
+    width: 14px;
+    height: auto;
+}
+
+.navbar__drawer-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar__drawer-menu--paragraph {
+    @include section-header;
+}
+
+.navbar__drawer-menu--dropdown {
+    margin-left: $x-small;
+    width: 11px;
+    height: auto;
+}
+
+//Hero
+.hero {
+    background-color: $background-color;
+}
+
+.hero__heading-container {
+    background-image: url("../images/desks2.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom;
+    overflow: hidden;
+}
+
+.hero__heading {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hero__heading--header {
+    @include big-headline-text($product-color);
+    margin-top: $x-large;
+}
+
+.hero__heading--image {
+    margin-top: $medium;
+    width: 299px;
+    height: auto;
+}
+
+.hero__paragraph {
+    @include section-header;
+    margin-top: $medium;
+    font-size: 22px;
+    line-height: 32px;
+}
+
+.hero__button-container {
+    margin-top: $medium;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hero__button {
+    width: 140px;
+    height: 52px;
+    background-color: #000;
+    color: white;
 }

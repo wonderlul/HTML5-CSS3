@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" />
+        <title>PRAKTYKI SH FE 2020</title>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&family=Roboto:wght@300;400;700&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+    <body>
+        <div class="container">
+            <nav class="center-wrapper navbar">
+                <a href="#">
+                    <img
+                        class="navbar__logo"
+                        src="<%= require('../assets/images/logo-mobile.png') %>"
+                        alt=""
+                /></a>
+                <div class="navbar__drawer-menu">
+                    <h4 class="navbar__drawer-menu--paragraph">
+                        zonifero WorkPlace
+                    </h4>
+                    <img
+                        class="navbar__drawer-menu--dropdown"
+                        src="<%=
+                    require('../assets/images/down-arrow.png') %>"
+                        alt=""
+                    />
+                </div>
+                <img
+                    class="navbar__burger-menu"
+                    src="<%=
+                require('../assets/images/ex_logo2.png') %>"
+                    alt=""
+                />
+            </nav>
+            <section class="hero">
+                <div class="hero__heading-container">
+                    <div class="center-wrapper">
+                        <div class="hero__heading">
+                            <h1 class="hero__heading--header">
+                                Streamline your workplace
+                            </h1>
+                            <img
+                                class="hero__heading--image"
+                                src="<%=
+                require('../assets/images/mob-hand.png') %>"
+                                alt=""
+                            />
+                        </div>
+                    </div>
+                </div>
+                <div class="center-wrapper">
+                    <p class="hero__paragraph">
+                        Effectively and quickly from your mobile device. Staying
+                        connected has never been easier.
+                    </p>
+                    <div class="hero__button-container">
+                        <div class="hero__button">google</div>
+                        <div class="hero__button">app</div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </body>
+</html>

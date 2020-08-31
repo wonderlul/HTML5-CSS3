@@ -1,0 +1,61 @@
+@mixin big-headline-text($color) {
+    font-family: $poppins;
+    font-weight: $bold;
+    font-size: 40px;
+    line-height: 50px;
+    color: $color;
+}
+
+@mixin description-text() {
+    font-family: $roboto;
+    font-weight: $regular;
+    color: #3146ff;
+    font-size: 30px;
+    line-height: 40px;
+}
+
+@mixin header-2() {
+    font-family: $poppins;
+    font-weight: $bold;
+    color: #000;
+    font-size: 30px;
+    line-height: 40px;
+}
+
+@mixin header-3() {
+    font-family: $poppins;
+    font-weight: $bold;
+    color: #000;
+    font-size: 19px;
+    line-height: 26px;
+}
+
+@mixin section-header() {
+    font-family: $roboto;
+    font-weight: $regular;
+    color: #000;
+    font-size: 17px;
+}
+
+@mixin paragraph-text() {
+    font-family: $roboto;
+    font-weight: $light;
+    color: #000;
+    font-size: 17px;
+    line-height: 25px;
+}
+
+@mixin list-item($color) {
+    font-family: $poppins;
+    font-weight: $bold;
+    color: $color;
+    font-size: 19px;
+    line-height: 26px;
+}
+
+@mixin tabs-item($font-weight) {
+    font-family: $roboto;
+    font-weight: $font-weight;
+    font-size: 17px;
+    color: #000;
+}
