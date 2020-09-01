@@ -12,10 +12,22 @@
     box-sizing: border-box;
 }
 
+.container {
+    background-color: $background-color;
+}
+
+.inactive {
+    display: none;
+}
+
+.active-tab {
+    font-weight: $bold;
+}
+
 .center-wrapper {
     max-width: 1360px;
     margin: 0 auto;
-    padding: 0 $small;
+    padding: $small;
 }
 //Navbar
 .navbar {
@@ -23,6 +35,7 @@
     height: 61px;
     justify-content: space-between;
     align-items: center;
+    background-color: #fff;
 }
 
 .navbar__logo {
@@ -41,11 +54,11 @@
     align-items: center;
 }
 
-.navbar__drawer-menu--paragraph {
+.navbar__paragraph {
     @include section-header;
 }
 
-.navbar__drawer-menu--dropdown {
+.navbar__dropdown {
     margin-left: $x-small;
     width: 11px;
     height: auto;
@@ -53,7 +66,6 @@
 
 //Hero
 .hero {
-    background-color: $background-color;
 }
 
 .hero__heading-container {
@@ -71,22 +83,20 @@
     align-items: center;
 }
 
-.hero__heading--header {
+.hero__header--heading {
     @include big-headline-text($product-color);
-    margin-top: $x-large;
+    margin-top: $large;
 }
 
-.hero__heading--image {
+.hero__image {
     margin-top: $medium;
     width: 299px;
     height: auto;
 }
 
-.hero__paragraph {
-    @include section-header;
+.hero__description {
+    @include description-text;
     margin-top: $medium;
-    font-size: 22px;
-    line-height: 32px;
 }
 
 .hero__button-container {
@@ -101,4 +111,376 @@
     height: 52px;
     background-color: #000;
     color: white;
+}
+
+//Target
+
+.target {
+    margin-top: $xx-large;
+}
+
+.target__header {
+    @include header-2;
+}
+
+.target__paragraph {
+    @include paragraph-text;
+    margin-top: $medium;
+}
+
+.target__input-wrapper {
+    margin-top: $medium;
+}
+
+//Characteristic
+
+.characteristic__section-header {
+    @include section-header;
+    margin-top: $medium;
+}
+
+.characteristic__card {
+    margin-top: $x-small;
+
+    background-color: #fff;
+}
+
+.characteristic__header {
+    @include header-3;
+    margin-top: $large;
+}
+
+.characteristic__paragraph {
+    @include paragraph-text;
+    margin-top: $base;
+}
+
+.characteristic__input-wrapper {
+    margin-top: $medium;
+}
+
+.characteristic__image-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.characterstic__image {
+    height: 175px;
+    width: auto;
+    margin-top: $base;
+}
+
+//Features
+
+.features__section-header {
+    @include section-header;
+    margin-top: $x-large;
+}
+
+.features__background {
+    margin-top: $base;
+    height: 365px;
+    background-image: url("../images/mob_features_bg.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.features__content {
+    position: relative;
+    background-color: $product-color;
+}
+
+.features__header {
+    @include big-headline-text(#fff);
+    margin-top: $medium;
+}
+
+.features__paragraph {
+    @include paragraph-text;
+    margin-top: $medium;
+    color: #fff;
+}
+
+.features__button {
+    @include section-header;
+    margin-top: $base;
+    width: 100%;
+    max-width: 420px;
+    border: 1px dotted #feffff;
+    background-color: rgba(0, 0, 0, 0);
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+    color: #fff;
+}
+
+.features__mobile {
+    right: calc(50% - 95px);
+    top: -290px;
+    position: absolute;
+    bottom: -26px;
+    width: 225px;
+    height: auto;
+}
+
+.features__arrows {
+    position: absolute;
+    top: -20px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.features__arrow {
+    height: 40px;
+    width: auto;
+}
+
+//Features-list
+
+.features-list {
+    background-color: #fff;
+}
+
+.features-list__list-container {
+    margin-top: $base;
+}
+
+.features-list__list-item {
+    list-style: none;
+    border-bottom: 1px solid #eee;
+}
+
+.item-container__view {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.view__paragraph {
+    @include list-item(#000);
+}
+
+.view__icon {
+    width: 11px;
+    height: 6px;
+}
+
+//Innovation
+
+.innovation {
+    background-color: #fff;
+}
+
+.innovation__header {
+    @include header-2;
+    margin-top: $x-large;
+}
+
+.innovation__description {
+    @include description-text;
+    margin-top: $large;
+    font-size: 22px;
+    line-height: 32px;
+}
+
+.innovation__image {
+    margin-top: $large;
+    height: 320px;
+    width: auto;
+}
+
+.innovation__header--item {
+    @include header-3;
+    margin-top: $small;
+}
+
+.innovation__paragraph {
+    @include paragraph-text;
+    margin-top: $medium;
+}
+
+//Partners
+
+.partners {
+    background-color: #fff;
+}
+
+.partners__header {
+    @include header-2;
+    margin-top: $large;
+}
+
+.partners__image {
+    margin-top: $medium;
+    width: 300px;
+    height: auto;
+}
+
+.partners__paragraph {
+    @include paragraph-text;
+    margin-top: $medium;
+}
+
+//Shop
+
+.shop__header {
+    @include header-2;
+    margin-top: $base;
+}
+
+.shop__center-wrapper {
+    margin-top: $small;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.shop__image {
+    height: 220px;
+    width: auto;
+    align-self: flex-end;
+}
+
+.shop__paragraph {
+    @include paragraph-text;
+    margin-top: $medium;
+}
+
+.shop__button {
+    @include primary-button;
+    margin-top: $small;
+    width: 200px;
+    height: 60px;
+}
+
+//Contact
+
+.contact__navbar {
+    margin-top: $large;
+}
+
+.contact_navbar-item-container {
+    display: flex;
+}
+
+.contact__navbar-item {
+    @include tabs-item;
+    list-style: none;
+}
+
+.contact__navbar-item {
+    @include tabs-item;
+    list-style: none;
+}
+
+.contact__navbar-item:first-child {
+    margin-right: 20px;
+}
+
+.active-tab {
+    font-weight: $bold;
+}
+
+//Contact/Form
+.contact {
+    margin-top: $x-small;
+    background-color: #fff;
+}
+.form__required::after {
+    content: "*";
+    margin-left: 2px;
+    color: $product-color;
+}
+
+.form__label {
+    @include form-label;
+}
+
+.form__control {
+    @include form-control;
+    max-width: 100%;
+}
+
+.form__control-wrapper {
+    margin-top: $small;
+}
+
+.form__field {
+    margin-top: $medium;
+}
+
+.form__field:first-child {
+    margin-top: $large;
+}
+
+.form__textarea {
+    min-height: 170px;
+    max-height: 170px;
+    max-width: 100%;
+    min-width: 100%;
+}
+
+.form__button-container {
+    margin-top: $medium;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form__button {
+    @include primary-button;
+    margin-bottom: $medium;
+    width: 200px;
+    height: 60px;
+}
+
+//Footer
+.footer {
+    background-color: $product-color;
+}
+
+.footer__list-header {
+    @include section-header;
+    font-weight: $bold;
+    color: #fff;
+}
+
+.footer__list-container {
+    margin-top: $base;
+    li {
+        list-style: none;
+    }
+}
+
+.footer__list-item {
+    @include paragraph-text;
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer__list {
+    margin-top: $large;
+}
+
+.footer__signature {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.signature__image {
+    margin-top: $small;
+    width: 40px;
+    height: auto;
+}
+
+.footer__dividing-line {
+    margin-top: $medium;
+    height: 1px;
+    width: 100%;
+    background-color: #e8e9eb;
 }

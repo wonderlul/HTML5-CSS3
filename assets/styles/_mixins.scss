@@ -1,5 +1,5 @@
 @mixin big-headline-text($color) {
-    font-family: $poppins;
+    font-family: $headline-font;
     font-weight: $bold;
     font-size: 40px;
     line-height: 50px;
@@ -7,15 +7,15 @@
 }
 
 @mixin description-text() {
-    font-family: $roboto;
+    font-family: $paragraph-font;
     font-weight: $regular;
-    color: #3146ff;
+    color: #000;
     font-size: 30px;
     line-height: 40px;
 }
 
 @mixin header-2() {
-    font-family: $poppins;
+    font-family: $headline-font;
     font-weight: $bold;
     color: #000;
     font-size: 30px;
@@ -23,7 +23,7 @@
 }
 
 @mixin header-3() {
-    font-family: $poppins;
+    font-family: $headline-font;
     font-weight: $bold;
     color: #000;
     font-size: 19px;
@@ -31,14 +31,14 @@
 }
 
 @mixin section-header() {
-    font-family: $roboto;
+    font-family: $paragraph-font;
     font-weight: $regular;
     color: #000;
     font-size: 17px;
 }
 
 @mixin paragraph-text() {
-    font-family: $roboto;
+    font-family: $paragraph-font;
     font-weight: $light;
     color: #000;
     font-size: 17px;
@@ -46,16 +46,42 @@
 }
 
 @mixin list-item($color) {
-    font-family: $poppins;
+    font-family: $headline-font;
     font-weight: $bold;
     color: $color;
     font-size: 19px;
     line-height: 26px;
 }
 
-@mixin tabs-item($font-weight) {
-    font-family: $roboto;
-    font-weight: $font-weight;
+@mixin tabs-item() {
+    font-family: $paragraph-font;
+    font-weight: $regular;
     font-size: 17px;
+    color: #000;
+}
+
+@mixin primary-button() {
+    font-family: $paragraph-font;
+    font-size: 17px;
+    background-color: $product-color;
+    color: #fff;
+    border: none;
+}
+
+@mixin form-label() {
+    font-family: $paragraph-font;
+    font-weight: $light;
+    font-size: 13px;
+    color: #000;
+}
+
+@mixin form-control() {
+    padding-bottom: $x-small;
+    font-family: $paragraph-font;
+    font-weight: $regular;
+    font-size: 30px;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    border-bottom: 1px dashed #2a2a2a;
     color: #000;
 }
