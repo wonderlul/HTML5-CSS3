@@ -85,3 +85,22 @@
     border-bottom: 1px dashed #2a2a2a;
     color: #000;
 }
+
+@mixin corousel-dots() {
+    display: none;
+
+    & + label span {
+        display: inline-block;
+        width: 5px;
+        height: 5px;
+        margin: -1px 4px 0 0;
+        vertical-align: middle;
+        background-color: $text-color;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+
+    &:checked + label span {
+        background-color: $product-color;
+    }
+}

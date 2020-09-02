@@ -1,0 +1,19 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    background-color: $background-color;
+}
+
+.inactive {
+    display: none;
+}
+
+.center-wrapper {
+    max-width: 1360px;
+    margin: 0 auto;
+    padding: $small;
+}

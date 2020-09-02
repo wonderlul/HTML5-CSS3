@@ -1,0 +1,38 @@
+.hero {
+    &__heading {
+        background-image: url("../images/desks2.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: bottom;
+        overflow: hidden;
+    }
+
+    &__header {
+        @include big-headline-text($product-color);
+        margin-top: $large;
+    }
+
+    &__image {
+        margin-top: $medium;
+        width: 299px;
+        height: auto;
+    }
+
+    &__description {
+        @include description-text;
+        margin-top: $medium;
+    }
+    &__button-container {
+        margin-top: $medium;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__button {
+        width: 140px;
+        height: 52px;
+        background-color: #000;
+        color: white;
+    }
+}

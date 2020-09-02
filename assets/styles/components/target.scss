@@ -1,0 +1,20 @@
+.target {
+    margin-top: $xx-large;
+
+    &__header {
+        @include header-2;
+    }
+
+    &__paragraph {
+        @include paragraph-text;
+        margin-top: $medium;
+    }
+
+    &__input-field {
+        margin-top: $medium;
+    }
+
+    &__input-control {
+        @include corousel-dots;
+    }
+}

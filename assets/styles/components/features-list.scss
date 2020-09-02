@@ -1,0 +1,29 @@
+.features-list {
+    background-color: #fff;
+
+    &__list-container {
+        margin-top: $base;
+    }
+
+    &__list-item {
+        list-style: none;
+        border-bottom: 1px solid #eee;
+    }
+}
+
+.item-container__view {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.view {
+    &__paragraph {
+        @include list-item(#000);
+    }
+
+    &__icon {
+        width: 11px;
+        height: 6px;
+    }
+}

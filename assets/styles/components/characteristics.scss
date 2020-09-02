@@ -1,0 +1,40 @@
+.characteristic {
+    &__section-header {
+        @include section-header;
+        margin-top: $medium;
+    }
+
+    &__card {
+        margin-top: $x-small;
+        background-color: #fff;
+    }
+
+    &__header {
+        @include header-3;
+        margin-top: $large;
+    }
+    &__paragraph {
+        @include paragraph-text;
+        margin-top: $base;
+    }
+
+    &__input-field {
+        margin-top: $medium;
+    }
+
+    &__input-control {
+        @include corousel-dots;
+    }
+
+    &__image-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__image {
+        height: 175px;
+        width: auto;
+        margin-top: $base;
+    }
+}

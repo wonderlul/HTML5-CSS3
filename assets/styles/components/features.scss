@@ -1,0 +1,66 @@
+.features {
+    &__section-header {
+        @include section-header;
+        margin-top: $x-large;
+    }
+
+    &__background {
+        margin-top: $base;
+        height: 365px;
+        background-image: url("../images/mob_features_bg.png");
+        background-size: cover;
+        background-position: center;
+    }
+
+    &__content {
+        position: relative;
+        background-color: $product-color;
+    }
+
+    &__header {
+        @include big-headline-text(#fff);
+        margin-top: $medium;
+    }
+
+    &__paragraph {
+        @include paragraph-text;
+        margin-top: $medium;
+        color: #fff;
+    }
+
+    &__button {
+        @include section-header;
+        margin-top: $base;
+        width: 100%;
+        max-width: 420px;
+        border: 1px dotted #feffff;
+        background-color: rgba(0, 0, 0, 0);
+        border-bottom: none;
+        border-left: none;
+        border-right: none;
+        color: #fff;
+    }
+
+    &__mobile {
+        right: calc(50% - 95px);
+        top: -290px;
+        position: absolute;
+        bottom: -26px;
+        width: 225px;
+        height: auto;
+    }
+
+    &__arrows {
+        position: absolute;
+        top: -20px;
+        left: 0;
+        right: 0;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__arrow {
+        height: 40px;
+        width: auto;
+    }
+}

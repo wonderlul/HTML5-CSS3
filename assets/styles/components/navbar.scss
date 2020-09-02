@@ -1,0 +1,33 @@
+.navbar {
+    display: flex;
+    height: 61px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+
+    &__logo {
+        width: 33px;
+        height: auto;
+    }
+
+    &__burger-menu {
+        width: 14px;
+        height: auto;
+    }
+
+    &__drawer-menu {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__paragraph {
+        @include section-header;
+    }
+
+    &__dropdown {
+        margin-left: $x-small;
+        width: 11px;
+        height: auto;
+    }
+}

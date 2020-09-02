@@ -1,0 +1,86 @@
+//Navbar
+
+.contact {
+    &__navbar {
+        margin-top: $large;
+    }
+
+    &__navbar-item-container {
+        display: flex;
+    }
+
+    &__navbar-item {
+        @include tabs-item;
+        list-style: none;
+
+        &:first-child {
+            margin-right: 20px;
+        }
+    }
+}
+
+//Form
+
+.contact {
+    margin-top: $x-small;
+    background-color: #fff;
+    &__form-required::after {
+        content: "*";
+        margin-left: 2px;
+        color: $product-color;
+    }
+
+    &__form-label {
+        @include form-label;
+    }
+
+    &__form-control {
+        @include form-control;
+        max-width: 100%;
+    }
+
+    &__form-control-wrapper {
+        margin-top: $small;
+    }
+
+    &__form-field {
+        margin-top: $medium;
+
+        &:first-child {
+            margin-top: $large;
+        }
+    }
+
+    &__form-textarea {
+        min-height: 170px;
+        max-height: 170px;
+        max-width: 100%;
+        min-width: 100%;
+    }
+
+    &__form-button-container {
+        margin-top: $medium;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__form-button {
+        @include primary-button;
+        margin-bottom: $medium;
+        width: 200px;
+        height: 60px;
+    }
+}
+
+.active-tab {
+    font-weight: $bold;
+    &::after {
+        margin-top: $x-small;
+        content: "";
+        display: block;
+        width: 30px;
+        height: 3px;
+        background-color: $secondary-color;
+    }
+}

@@ -18,11 +18,9 @@
             </nav>
             <section class="hero">
                 <div class="center-wrapper">
-                    <div class="hero__heading-container">
-                        <div class="hero__heading">
-                            <h1 class="hero__header--heading">Streamline your workplace</h1>
-                            <img class="hero__image" src="<%=require('../assets/images/mob-hand.png') %>" alt="" />
-                        </div>
+                    <div class="hero__heading">
+                        <h1 class="hero__header">Streamline your workplace</h1>
+                        <img class="hero__image" src="<%=require('../assets/images/mob-hand.png') %>" alt="" />
                     </div>
 
                     <h3 class="hero__description">Effectively and quickly from your mobile device. Staying connected has never been easier.</h3>
@@ -50,10 +48,13 @@
                         <h2 class="target__header">Visitors</h2>
                         <p class="target__paragraph">A smooth and welcoming visitor experience – easy navigation around your facilities.</p>
                     </div>
-                    <div class="target__input-wrapper">
-                        <input type="radio" checked="{true}" />
-                        <input type="radio" />
-                        <input type="radio" />
+                    <div class="target__input-field">
+                        <input class="target__input-control" type="radio" id="target-1" />
+                        <label for="target-1"><span></span></label>
+                        <input class="target__input-control" type="radio" id="target-2" />
+                        <label for="target-2"><span></span></label>
+                        <input class="target__input-control" type="radio" id="target-3" />
+                        <label for="target-3"><span></span></label>
                     </div>
                 </div>
             </section>
@@ -69,10 +70,13 @@
                             </div>
                             <h3 class="characteristic__header">Use your time and space smarter</h3>
                             <p class="characteristic__paragraph">Never again run out of coffee or other supplies. Create an efficient hive for your busy bees.</p>
-                            <div class="target__input-wrapper">
-                                <input type="radio" checked="{true}" />
-                                <input type="radio" />
-                                <input type="radio" />
+                            <div class="characteristic__input-field">
+                                <input class="characteristic__input-control" type="radio" id="characteristic-1" />
+                                <label for="characteristic-1"><span></span></label>
+                                <input class="characteristic__input-control" type="radio" id="characteristic-2" />
+                                <label for="characteristic-2"><span></span></label>
+                                <input class="characteristic__input-control" type="radio" id="characteristic-3" />
+                                <label for="characteristic-3"><span></span></label>
                             </div>
                         </div>
                     </div>
@@ -202,7 +206,7 @@
             <section class="contact">
                 <div class="center-wrapper">
                     <nav class="contact__navbar">
-                        <ul class="contact_navbar-item-container">
+                        <ul class="contact__navbar-item-container">
                             <li class="contact__navbar-item active-tab">Contact form</li>
                             <li class="contact__navbar-item">Call us</li>
                         </ul>
@@ -210,65 +214,65 @@
 
                     <div class="contact__form">
                         <form action="#" method="POST">
-                            <div class="form__field">
-                                <label class="form__label form__required" for="regform-name">First name</label>
-                                <div class="form__control-wrapper">
-                                    <input class="form__control" id="regform-first-name" type="text" name="regform[first-name]" placeholder="John" required />
+                            <div class="contact__form-field">
+                                <label class="contact__form-label contact__form-required" for="regform-name">First name</label>
+                                <div class="contact__form-control-wrapper">
+                                    <input class="contact__form-control" id="regform-first-name" type="text" name="regform[first-name]" placeholder="John" required />
                                 </div>
-                                <div class="form__errors inactive">
-                                    <div class="form__error">wypełnij pole poprawnie</div>
-                                </div>
-                            </div>
-
-                            <div class="form__field">
-                                <label class="form__label form__required" for="regform-last-name">Last name</label>
-                                <div class="form__control-wrapper">
-                                    <input class="form__control" id="regform-last-name" type="text" name="regform[last-name]" placeholder="Wick" required />
-                                </div>
-                                <div class="form__errors inactive">
-                                    <div class="form__error">wypełnij pole poprawnie</div>
+                                <div class="contact__form-errors inactive">
+                                    <div class="contact__form-error">wypełnij pole poprawnie</div>
                                 </div>
                             </div>
 
-                            <div class="form__field">
-                                <label class="form__label form__required" for="regform-email">E-mail</label>
-                                <div class="form__control-wrapper">
-                                    <input class="form__control" id="regform-email" type="email" name="regform[email]" placeholder="johnw@hollywood.com" required />
+                            <div class="contact__form-field">
+                                <label class="contact__form-label contact__form-required" for="regform-last-name">Last name</label>
+                                <div class="contact__form-control-wrapper">
+                                    <input class="contact__form-control" id="regform-last-name" type="text" name="regform[last-name]" placeholder="Wick" required />
                                 </div>
-                                <div class="form__errors inactive">
-                                    <div class="form__error">wypełnij pole poprawnie</div>
-                                </div>
-                            </div>
-
-                            <div class="form__field">
-                                <label class="form__label form__required" for="regform-phone">Phone number</label>
-                                <div class="form__control-wrapper">
-                                    <input class="form__control" id="regform-phone" type="tel" name="regform[phone]" placeholder="111-111-111" required />
-                                </div>
-                                <div class="form__errors inactive">
-                                    <div class="form__error">wypełnij pole poprawnie</div>
+                                <div class="contact__form-errors inactive">
+                                    <div class="contact__form-error">wypełnij pole poprawnie</div>
                                 </div>
                             </div>
 
-                            <div class="form__field">
-                                <label class="form__label form__required" for="regform-message"> Message</label>
+                            <div class="contact__form-field">
+                                <label class="contact__form-label contact__form-required" for="regform-email">E-mail</label>
+                                <div class="contact__form-control-wrapper">
+                                    <input class="contact__form-control" id="regform-email" type="email" name="regform[email]" placeholder="johnw@hollywood.com" required />
+                                </div>
+                                <div class="contact__form-errors inactive">
+                                    <div class="contact__form-error">wypełnij pole poprawnie</div>
+                                </div>
+                            </div>
 
-                                <div class="form__control-wrapper">
+                            <div class="contact__form-field">
+                                <label class="contact__form-label contact__form-required" for="regform-phone">Phone number</label>
+                                <div class="contact__form-control-wrapper">
+                                    <input class="contact__form-control" id="regform-phone" type="tel" name="regform[phone]" placeholder="111-111-111" required />
+                                </div>
+                                <div class="contact__form-errors inactive">
+                                    <div class="contact__form-error">wypełnij pole poprawnie</div>
+                                </div>
+                            </div>
+
+                            <div class="contact__form-field">
+                                <label class="contact__form-label contact__form-required" for="regform-message"> Message</label>
+
+                                <div class="contact__form-control-wrapper">
                                     <textarea
-                                        class="form__control form__textarea"
+                                        class="contact__form-control contact__form-textarea"
                                         id="regform-message"
                                         name="regform[message]"
                                         placeholder="Hello :) I’m just wondering if you could..."
                                         required
                                     ></textarea>
                                 </div>
-                                <div class="form__errors inactive">
-                                    <div class="form__error">wypełnij pole poprawnie</div>
+                                <div class="contact__form-errors inactive">
+                                    <div class="contact__form-error">wypełnij pole poprawnie</div>
                                 </div>
                             </div>
                         </form>
-                        <div class="form__button-container">
-                            <button class="form__button">Send message</button>
+                        <div class="contact__form-button-container">
+                            <button class="contact__form-button">Send message</button>
                         </div>
                     </div>
                 </div>
@@ -299,7 +303,7 @@
                         <div class="footer__list">
                             <h4 class="footer__list-header">Resources:</h4>
                             <ul class="footer__list-container">
-                                <li class="gowno">
+                                <li>
                                     <a class="footer__list-item" href="#">Documentation</a>
                                 </li>
                                 <li>
@@ -332,11 +336,7 @@
                 <div class="footer__dividing-line"></div>
 
                 <div class="center-wrapper footer__signature">
-                    <img
-                        class="signature__image"
-                        src="<%=require('../assets/images/ex_logo.png') %>"
-                        alt=""
-                    />
+                    <img class="signature__image" src="<%=require('../assets/images/ex_logo.png') %>" alt="" />
                 </div>
             </footer>
         </div>

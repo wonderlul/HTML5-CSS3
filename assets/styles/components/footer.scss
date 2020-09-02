@@ -1,0 +1,45 @@
+.footer {
+    background-color: $product-color;
+
+    &__list-header {
+        @include section-header;
+        font-weight: $bold;
+        color: #fff;
+    }
+
+    &__list-container {
+        margin-top: $base;
+        li {
+            list-style: none;
+        }
+    }
+
+    &__list-item {
+        @include paragraph-text;
+        color: #fff;
+        text-decoration: none;
+    }
+
+    &__list {
+        margin-top: $large;
+    }
+
+    &__signature {
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+    }
+
+    &__dividing-line {
+        margin-top: $medium;
+        height: 1px;
+        width: 100%;
+        background-color: #e8e9eb;
+    }
+}
+
+.signature__image {
+    margin-top: $small;
+    width: 40px;
+    height: auto;
+}

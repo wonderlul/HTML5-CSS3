@@ -1,0 +1,29 @@
+.shop {
+    &__header {
+        @include header-2;
+        margin-top: $base;
+    }
+
+    &__center-wrapper {
+        margin-top: $small;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__image {
+        height: 220px;
+        width: auto;
+        align-self: flex-end;
+    }
+    &__paragraph {
+        @include paragraph-text;
+        margin-top: $medium;
+    }
+    &__button {
+        @include primary-button;
+        margin-top: $small;
+        width: 200px;
+        height: 60px;
+    }
+}

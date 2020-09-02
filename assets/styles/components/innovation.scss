@@ -1,0 +1,31 @@
+.innovation {
+    background-color: #fff;
+
+    &__header {
+        @include header-2;
+        margin-top: $x-large;
+
+        &--item {
+            @include header-3;
+            margin-top: $small;
+        }
+    }
+
+    &__description {
+        @include description-text;
+        margin-top: $large;
+        font-size: 22px;
+        line-height: 32px;
+    }
+
+    &__image {
+        margin-top: $large;
+        height: 320px;
+        width: auto;
+    }
+
+    &__paragraph {
+        @include paragraph-text;
+        margin-top: $medium;
+    }
+}

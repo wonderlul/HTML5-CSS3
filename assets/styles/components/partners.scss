@@ -1,0 +1,19 @@
+.partners {
+    background-color: #fff;
+
+    &__header {
+        @include header-2;
+        margin-top: $large;
+    }
+
+    &__image {
+        margin-top: $medium;
+        width: 300px;
+        height: auto;
+    }
+
+    &__paragraph {
+        @include paragraph-text;
+        margin-top: $medium;
+    }
+}
