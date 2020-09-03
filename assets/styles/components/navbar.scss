@@ -64,13 +64,13 @@
     }
 
     &__list-element {
+        margin-right: $base;
         list-style: none;
     }
 
     &__item {
         text-decoration: none;
         @include tabs-item;
-        margin-right: $small;
     }
 
     //Navigation
@@ -81,7 +81,6 @@
 
     &__navigation-wrapper {
         display: flex;
-        align-items: flex-end;
     }
 
     &__navigation-header {

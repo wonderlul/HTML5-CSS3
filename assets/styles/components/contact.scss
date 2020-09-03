@@ -18,10 +18,23 @@
     &__navbar-item {
         @include tabs-item;
         list-style: none;
+        cursor: pointer;
 
         &:first-child {
             margin-right: 20px;
         }
+    }
+}
+
+.contact-active-tab {
+    font-weight: $bold;
+    &::after {
+        margin-top: $x-small;
+        content: "";
+        display: block;
+        width: 30px;
+        height: 3px;
+        background-color: $secondary-color;
     }
 }
 
@@ -98,17 +111,5 @@
         margin-bottom: $medium;
         width: 200px;
         height: 60px;
-    }
-}
-
-.active-tab {
-    font-weight: $bold;
-    &::after {
-        margin-top: $x-small;
-        content: "";
-        display: block;
-        width: 30px;
-        height: 3px;
-        background-color: $secondary-color;
     }
 }

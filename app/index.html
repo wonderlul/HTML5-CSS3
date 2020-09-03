@@ -14,18 +14,18 @@
                     <a href="#"> <img class="navbar-desktop__logo" src="<%=require('../assets/images/logo.png') %>" alt="" /></a>
                     <div class="navbar-desktop__menu-desktop">
                         <ul class="navbar-desktop__menu-list">
-                            <li class="navbar-desktop__list-element"><a class="navbar-desktop__item" href="">Zonifero products</a></li>
-                            <li class="navbar-desktop__list-element"><a class="navbar-desktop__item" href="">Store</a></li>
-                            <li class="navbar-desktop__list-element"><a class="navbar-desktop__item" href="">Blog</a></li>
+                            <li class="navbar-desktop__list-element"><a class="navbar-desktop__item" href="#">Zonifero products</a></li>
+                            <li class="navbar-desktop__list-element"><a class="navbar-desktop__item" href="#">Store</a></li>
+                            <li class="navbar-desktop__list-element"><a class="navbar-desktop__item" href="#">Blog</a></li>
                             <li class="navbar-desktop__list-element">
-                                <a class="navbar-desktop__item" href="">
+                                <a class="navbar-desktop__item" href="#">
                                     <div>
                                         <img src="" alt="" />
                                         <img src="" alt="" /></div
                                 ></a>
                             </li>
-                            <li class="navbar-desktop__list-element"><a class="navbar-desktop__item" href="">Sign in</a></li>
-                            <li class="navbar-desktop__list-element"><a class="navbar-desktop__item" href="">Get the app</a></li>
+                            <li class="navbar-desktop__list-element"><a class="navbar-desktop__item" href="#">Sign in</a></li>
+                            <li class="navbar-desktop__list-element"><a class="navbar-desktop__item" href="#">Get the app</a></li>
                         </ul>
                     </div>
                 </div>
@@ -34,11 +34,11 @@
                         <h4 class="navbar-desktop__navigation-header">zonifero WorkPlace:</h4>
                         <div class="navbar-desktop__navigation-container">
                             <ul class="navbar-desktop__menu-list">
-                                <li class="navbar-desktop__list-element"><a class="navbar-desktop__item nav-active-tab" href="">Overview</a></li>
-                                <li class="navbar-desktop__list-element"><a class="navbar-desktop__item" href="">Features</a></li>
-                                <li class="navbar-desktop__list-element"><a class="navbar-desktop__item" href="">Specs</a></li>
-                                <li class="navbar-desktop__list-element"><a class="navbar-desktop__item" href="">FAQ</a></li>
-                                <li class="navbar-desktop__list-element"><a class="navbar-desktop__item" href="">Contact</a></li>
+                                <li class="navbar-desktop__list-element"><a class="navbar-desktop__item nav-active-tab" href="#">Overview</a></li>
+                                <li class="navbar-desktop__list-element"><a class="navbar-desktop__item" href="#">Features</a></li>
+                                <li class="navbar-desktop__list-element"><a class="navbar-desktop__item" href="#">Specs</a></li>
+                                <li class="navbar-desktop__list-element"><a class="navbar-desktop__item" href="#">FAQ</a></li>
+                                <li class="navbar-desktop__list-element"><a class="navbar-desktop__item" href="#">Contact</a></li>
                             </ul>
                         </div>
                     </div>
@@ -147,8 +147,8 @@
                             <img class="features__mobile" src="<%=require('../assets/images/mob_mobile.png') %>" alt="" />
                             <img class="features__mobile--desktop" src="<%=require('../assets/images/Silver.png') %>" alt="" />
                             <div class="features__arrows">
-                                <img class="features__arrow" src="<%=require('../assets/images/left-arrow.png') %>" alt="" />
-                                <img class="features__arrow" src="<%=require('../assets/images/right-arrow.png') %>" alt="" />
+                                <img class="features__arrow left-arrow" src="<%=require('../assets/images/left-arrow.png') %>" alt="" />
+                                <img class="features__arrow right-arrow" src="<%=require('../assets/images/right-arrow.png') %>" alt="" />
                             </div>
                         </div>
                     </div>
@@ -158,40 +158,34 @@
                 <div class="center-wrapper">
                     <ul class="features-list__list-container">
                         <li class="features-list__list-item">
-                            <div class="features-list__item-container">
-                                <div class="item-container__view center-wrapper">
-                                    <h3 class="view__paragraph">Room booking</h3>
-                                    <img class="view__icon" src="<%=require('../assets/images/down-arrow.png') %>" alt="" />
-                                </div>
-                                <p class="item-container__content inactive">
-                                    zonifero business supports meeting rooms booking. Reservations can be made from the smartphone, tablet in front of the room or directly from the
-                                    calendar in Office365 or G Suite. Room reservations can also be made in companies that are not familiar with Office 365 or G Suite services.
-                                </p>
+                            <div class="features-list__item-container-view center-wrapper">
+                                <h3 class="features-list__header features-list__active">Hot-desk booking</h3>
+                                <img class="icon" src="<%=require('../assets/images/down-arrow.png') %>" alt="" />
                             </div>
+                            <p class="features-list__paragraph inactive">
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe officiis aperiam quis ipsum! Vel non doloremque quo sit tenetur repudiandae, modi
+                                dolor id, magnam magni officiis corrupti iste facere vero.
+                            </p>
                         </li>
                         <li class="features-list__list-item">
-                            <div class="features-list__item-container">
-                                <div class="item-container__view center-wrapper">
-                                    <h3 class="view__paragraph">Hot-desk booking</h3>
-                                    <img class="view__icon" src="<%=require('../assets/images/down-arrow.png') %>" alt="" />
-                                </div>
-                                <p class="item-container__content inactive">
-                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe officiis aperiam quis ipsum! Vel non doloremque quo sit tenetur repudiandae,
-                                    modi dolor id, magnam magni officiis corrupti iste facere vero.
-                                </p>
+                            <div class="features-list__item-container-view center-wrapper">
+                                <h3 class="features-list__header">Room booking</h3>
+                                <img class="features-list__icon" src="<%=require('../assets/images/down-arrow.png') %>" alt="" />
                             </div>
+                            <p class="features-list__paragraph inactive">
+                                zonifero business supports meeting rooms booking. Reservations can be made from the smartphone, tablet in front of the room or directly from the
+                                calendar in Office365 or G Suite. Room reservations can also be made in companies that are not familiar with Office 365 or G Suite services.
+                            </p>
                         </li>
                         <li class="features-list__list-item">
-                            <div class="features-list__item-container">
-                                <div class="item-container__view center-wrapper">
-                                    <h3 class="view__paragraph">Status of employee</h3>
-                                    <img class="view__icon" src="<%=require('../assets/images/down-arrow.png') %>" alt="" />
-                                </div>
-                                <p class="item-container__content inactive">
-                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium, recusandae. Dignissimos perferendis veniam consequuntur necessitatibus
-                                    consequatur eum accusantium temporibus, voluptatem, aperiam dolores eaque? Dolores, beatae perferendis suscipit tenetur iste illum.
-                                </p>
+                            <div class="features-list__item-container-view center-wrapper">
+                                <h3 class="features-list__header">Status of employee</h3>
+                                <img class="icon" src="<%=require('../assets/images/down-arrow.png') %>" alt="" />
                             </div>
+                            <p class="features-list__paragraph inactive">
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium, recusandae. Dignissimos perferendis veniam consequuntur necessitatibus
+                                consequatur eum accusantium temporibus, voluptatem, aperiam dolores eaque? Dolores, beatae perferendis suscipit tenetur iste illum.
+                            </p>
                         </li>
                     </ul>
                 </div>
@@ -245,7 +239,7 @@
                 <div class="center-wrapper">
                     <nav class="contact__navbar">
                         <ul class="contact__navbar-item-container">
-                            <li class="contact__navbar-item active-tab">Contact form</li>
+                            <li class="contact__navbar-item contact-active-tab">Contact form</li>
                             <li class="contact__navbar-item">Call us</li>
                         </ul>
                     </nav>

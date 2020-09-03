@@ -6,24 +6,27 @@
     }
 
     &__list-item {
+        cursor: pointer;
         list-style: none;
         border-bottom: 1px solid #eee;
     }
-}
 
-.item-container__view {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+    &__item-container-view {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
 
-.view {
-    &__paragraph {
+    &__header {
         @include list-item(#000);
     }
 
     &__icon {
         width: 11px;
         height: 6px;
+    }
+
+    &__active {
+        @include list-item($product-color);
     }
 }
