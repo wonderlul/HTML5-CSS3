@@ -10,14 +10,9 @@ import "../assets/styles/index.scss";
 
 //Swipe
 
-const ACTION_REMOVE_FOCUS_FROM_FEATURES_LIST = (listItems) => {
-    const listItemWithClassToRemove = listItems.find((listItem) => listItem.querySelector(".features-list__active"));
-    if (listItemWithClassToRemove) {
-        listItemWithClassToRemove.querySelector(".features-list__active").classList.remove("features-list__active");
-    }
-};
-
 const featuresListItems = [...document.querySelectorAll(".features-list__list-item")];
+
+const contactNavbarListItem = [...document.querySelectorAll(".contact__navbar-item")];
 
 const leftArrow = document.querySelector(".left-arrow");
 const rightArrow = document.querySelector(".right-arrow");
@@ -48,6 +43,13 @@ const fadeIn = (templates) => {
     templates.forEach((template) => {
         template.style.opacity = 1;
     });
+};
+
+const ACTION_REMOVE_FOCUS_FROM_FEATURES_LIST = (listItems) => {
+    const listItemWithClassToRemove = listItems.find((listItem) => listItem.querySelector(".features-list__active"));
+    if (listItemWithClassToRemove) {
+        listItemWithClassToRemove.querySelector(".features-list__active").classList.remove("features-list__active");
+    }
 };
 
 const ACTION_SWITCH_CONTENT = (content) => {
@@ -119,6 +121,8 @@ navbarTabs.forEach((tab) => tab.addEventListener("click", () => ACTION_NAVBAR_FO
 const ACTION_FEATURES_LIST_FOCUS = (listItem, listItems) => {
     const header = listItem.querySelector(".features-list__header");
 
+    ACTION_REMOVE_FOCUS_FROM_FEATURES_LIST(featuresListItems);
+
     header.classList.add("features-list__active");
 
     ordinalNumber = listItems.indexOf(listItem);
@@ -130,14 +134,10 @@ featuresListItems.forEach((listItem) => {
     listItem.addEventListener("click", () => ACTION_FEATURES_LIST_FOCUS(listItem, featuresListItems));
 });
 
-(function () {
-    const tabs = [...document.querySelectorAll(".contact__navbar-item")];
+const ACTION_CONTACT_NAVBAR_FOCUS = (tab, tabs) => {
+    const tabToRemoveClass = tabs.find((tab) => tab.classList.contains("contact-active-tab"));
+    tabToRemoveClass.classList.remove("contact-active-tab");
+    tab.classList.add("contact-active-tab");
+};
 
-    tabs.forEach((tab) =>
-        tab.addEventListener("click", () => {
-            const tabToRemoveClass = tabs.find((tab) => tab.classList.contains("contact-active-tab"));
-            tabToRemoveClass.classList.remove("contact-active-tab");
-            tab.classList.add("contact-active-tab");
-        })
-    );
-})();
+contactNavbarListItem.forEach((tab) => tab.addEventListener("click", () => ACTION_CONTACT_NAVBAR_FOCUS(tab, contactNavbarListItem)));
