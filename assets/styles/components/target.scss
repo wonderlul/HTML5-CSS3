@@ -1,8 +1,21 @@
 .target {
-    margin-top: $xx-large;
+    margin-top: $x-large;
 
+    &__wrapper {
+        @media (min-width: 760px) {
+            display: flex;
+        }
+    }
+
+    &__item {
+        @media (min-width: 760px) {
+            margin-right: $medium;
+            flex-basis: 20%;
+        }
+    }
     &__header {
         @include header-2;
+        margin-top: $medium;
     }
 
     &__paragraph {
@@ -12,6 +25,13 @@
 
     &__input-field {
         margin-top: $medium;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @media (min-width: 760px) {
+            display: none;
+        }
     }
 
     &__input-control {

@@ -4,9 +4,22 @@
         margin-top: $medium;
     }
 
+    &__cards-container {
+        @media (min-width: 760px) {
+            display: flex;
+
+            max-width: 1360px;
+            margin: 0 auto;
+            padding: $small;
+        }
+    }
     &__card {
-        margin-top: $x-small;
         background-color: #fff;
+        margin-top: $x-small;
+        @media (min-width: 760px) {
+            margin-right: $small;
+            flex-basis: 20%;
+        }
     }
 
     &__header {
@@ -20,6 +33,13 @@
 
     &__input-field {
         margin-top: $medium;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @media (min-width: 760px) {
+            display: none;
+        }
     }
 
     &__input-control {

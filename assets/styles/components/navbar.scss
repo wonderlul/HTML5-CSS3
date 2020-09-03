@@ -1,9 +1,14 @@
+//Mobile
+
 .navbar {
     display: flex;
     height: 61px;
     justify-content: space-between;
     align-items: center;
     background-color: #fff;
+    @media (min-width: 760px) {
+        display: none;
+    }
 
     &__logo {
         width: 33px;
@@ -29,5 +34,70 @@
         margin-left: $x-small;
         width: 11px;
         height: auto;
+    }
+}
+
+//Desktop
+
+.navbar-desktop {
+    display: flex;
+    flex-direction: column;
+    @media (max-width: 760px) {
+        display: none;
+    }
+
+    //Menu
+
+    &__menu {
+        display: flex;
+        justify-content: space-between;
+        background-color: #fff;
+    }
+
+    &__logo {
+        width: 130px;
+        height: auto;
+    }
+
+    &__menu-list {
+        display: flex;
+    }
+
+    &__list-element {
+        list-style: none;
+    }
+
+    &__item {
+        text-decoration: none;
+        @include tabs-item;
+        margin-right: $small;
+    }
+
+    //Navigation
+
+    &__navigation {
+        background-color: #fff;
+    }
+
+    &__navigation-wrapper {
+        display: flex;
+        align-items: flex-end;
+    }
+
+    &__navigation-header {
+        @include section-header;
+        margin-right: $base;
+    }
+}
+
+.nav-active-tab {
+    font-weight: $bold;
+    &::after {
+        margin-top: $x-small;
+        content: "";
+        display: block;
+        width: 30px;
+        height: 3px;
+        background-color: $secondary-color;
     }
 }

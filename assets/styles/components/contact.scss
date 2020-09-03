@@ -3,6 +3,12 @@
 .contact {
     &__navbar {
         margin-top: $large;
+
+        @media (min-width: 760px) {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
     }
 
     &__navbar-item-container {
@@ -24,6 +30,14 @@
 .contact {
     margin-top: $x-small;
     background-color: #fff;
+
+    &__form {
+        @media (min-width: 760px) {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+    }
     &__form-required::after {
         content: "*";
         margin-left: 2px;
@@ -36,7 +50,7 @@
 
     &__form-control {
         @include form-control;
-        max-width: 100%;
+        width: 100%;
     }
 
     &__form-control-wrapper {
@@ -46,8 +60,22 @@
     &__form-field {
         margin-top: $medium;
 
+        @media (min-width: 760px) {
+            flex-basis: 45%;
+        }
+
         &:first-child {
-            margin-top: $large;
+            @media (max-width: 760px) {
+                margin-top: $large;
+            }
+        }
+
+        &:last-child {
+            @media (min-width: 760px) {
+                align-self: center;
+                justify-self: center;
+                flex-basis: 100%;
+            }
         }
     }
 

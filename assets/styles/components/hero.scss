@@ -1,32 +1,81 @@
 .hero {
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        @media (min-width: 760px) {
+            display: grid;
+            grid-template-areas:
+                "header background"
+                "desc background"
+                "btn background";
+            grid-template-rows: 1fr 1fr 1fr;
+            grid-template-columns: 40% 60%;
+        }
+    }
     &__heading {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-end;
+        order: 2;
         background-image: url("../images/desks2.png");
         background-repeat: no-repeat;
         background-size: contain;
         background-position: bottom;
         overflow: hidden;
+        @media (min-width: 760px) {
+            grid-area: background;
+            background-image: url("../images/desks.png");
+            align-items: center;
+        }
     }
 
     &__header {
         @include big-headline-text($product-color);
         margin-top: $large;
+        order: 1;
+        @media (min-width: 760px) {
+            grid-area: header;
+        }
     }
 
     &__image {
         margin-top: $medium;
         width: 299px;
         height: auto;
+        @media (min-width: 760px) {
+            display: none;
+        }
+        &--desktop {
+            width: 590px;
+            height: auto;
+
+            @media (max-width: 760px) {
+                display: none;
+            }
+        }
     }
 
     &__description {
         @include description-text;
         margin-top: $medium;
+        order: 3;
+
+        @media (min-width: 760px) {
+            grid-area: desc;
+        }
     }
     &__button-container {
         margin-top: $medium;
         display: flex;
         justify-content: space-between;
         align-items: center;
+        order: 4;
+
+        @media (min-width: 760px) {
+            grid-area: btn;
+            justify-content: flex-start;
+        }
     }
 
     &__button {
@@ -34,5 +83,12 @@
         height: 52px;
         background-color: #000;
         color: white;
+
+        @media (min-width: 760px) {
+            margin-right: $small;
+        }
     }
+}
+
+@media (min-width: 760px) {
 }

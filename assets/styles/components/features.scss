@@ -1,7 +1,7 @@
 .features {
     &__section-header {
         @include section-header;
-        margin-top: $x-large;
+        margin-top: $large;
     }
 
     &__background {
@@ -10,22 +10,50 @@
         background-image: url("../images/mob_features_bg.png");
         background-size: cover;
         background-position: center;
+
+        @media (min-width: 760px) {
+            height: 510px;
+            background-image: url("../images/Layer 78.png");
+        }
     }
 
     &__content {
         position: relative;
         background-color: $product-color;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__text {
+        @media (min-width: 760px) {
+            display: flex;
+            justify-content: space-between;
+            margin-top: $medium;
+        }
     }
 
     &__header {
         @include big-headline-text(#fff);
         margin-top: $medium;
+
+        @media (min-width: 760px) {
+            margin-top: $large;
+            flex-basis: 30%;
+        }
     }
 
     &__paragraph {
         @include paragraph-text;
         margin-top: $medium;
         color: #fff;
+
+        @media (min-width: 760px) {
+            margin-top: $xx-large;
+            flex-basis: 40%;
+            align-self: flex-end;
+        }
     }
 
     &__button {
@@ -39,15 +67,35 @@
         border-left: none;
         border-right: none;
         color: #fff;
+
+        @media (min-width: 760px) {
+            margin-top: $x-large;
+        }
     }
 
     &__mobile {
         right: calc(50% - 95px);
         top: -290px;
         position: absolute;
-        bottom: -26px;
         width: 225px;
         height: auto;
+
+        @media (min-width: 760px) {
+            display: none;
+        }
+
+        &--desktop {
+            right: calc(50% - 480px);
+            top: -495px;
+            position: absolute;
+
+            height: 670px;
+            width: auto;
+
+            @media (max-width: 760px) {
+                display: none;
+            }
+        }
     }
 
     &__arrows {
@@ -57,10 +105,19 @@
         right: 0;
         display: flex;
         justify-content: space-between;
+
+        @media (min-width: 760px) {
+            top: -35px;
+        }
     }
 
     &__arrow {
         height: 40px;
         width: auto;
+
+        @media (min-width: 760px) {
+            height: 70px;
+            width: auto;
+        }
     }
 }

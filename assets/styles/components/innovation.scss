@@ -8,6 +8,10 @@
         &--item {
             @include header-3;
             margin-top: $small;
+
+            @media (min-width: 760px) {
+                margin-top: $x-large;
+            }
         }
     }
 
@@ -22,6 +26,32 @@
         margin-top: $large;
         height: 320px;
         width: auto;
+
+        @media (min-width: 760px) {
+            display: none;
+        }
+
+        &--desktop {
+            height: 590px;
+            width: auto;
+            @media (max-width: 760px) {
+                display: none;
+            }
+        }
+    }
+
+    &__heading {
+        @media (min-width: 760px) {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+
+    &__text {
+        @media (min-width: 760px) {
+            flex-basis: 50%;
+        }
     }
 
     &__paragraph {

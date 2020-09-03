@@ -1,24 +1,90 @@
+// .shop {
+//     display: grid;
+//     grid-template-columns: 1fr 1fr;
+//     grid-template-rows: 1fr;
+//     grid-template-areas: "header image";
+
+//     &__header {
+//         @include header-2;
+//         margin-top: $base;
+//         grid-area: header;
+//     }
+
+//     &__image {
+//         height: 220px;
+//         width: auto;
+//         align-self: flex-end;
+//         grid-area: image;
+//     }
+//     &__paragraph {
+//         @include paragraph-text;
+//         margin-top: $medium;
+//         grid-area: paragraph;
+//     }
+//     &__button {
+//         @include primary-button;
+//         justify-self: center;
+//         margin-top: $small;
+//         width: 200px;
+//         height: 60px;
+//         grid-area: button;
+//     }
+// }
+
 .shop {
+    @media (min-width: 760px) {
+        height: 500px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas:
+            ". text image ."
+            ". button image .";
+    }
+
+    &__text-wrapper {
+        @media (min-width: 760px) {
+            grid-area: text;
+        }
+    }
     &__header {
         @include header-2;
         margin-top: $base;
     }
 
-    &__center-wrapper {
+    &__image-wrapper {
+        @media (max-width: 760px) {
+            margin-top: $small;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+        }
+
+        @media (min-width: 760px) {
+            grid-area: image;
+            align-self: center;
+            justify-self: end;
+        }
+    }
+    &__image {
+        height: 220px;
+        width: auto;
+    }
+    &__paragraph {
+        @include paragraph-text;
+        margin-top: $medium;
+    }
+
+    &__button-wrapper {
         margin-top: $small;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
-    }
-    &__image {
-        height: 220px;
-        width: auto;
-        align-self: flex-end;
-    }
-    &__paragraph {
-        @include paragraph-text;
-        margin-top: $medium;
+
+        @media (min-width: 760px) {
+            grid-area: button;
+        }
     }
     &__button {
         @include primary-button;
@@ -27,3 +93,19 @@
         height: 60px;
     }
 }
+
+// <section class="shop">
+// <div class="center-wrapper">
+//     <h2 class="shop__header">Shop zonifero accessories</h2>
+//     <p class="shop__paragraph">
+//         Lorem ipsum dolor sit amet consectetur adipisicing elit. Et natus aut doloribus reiciendis similique quibusdam, nihil odit adipisci iusto facere
+//         reprehenderit consequatur, tenetur qui neque ipsum ex cupiditate architecto aspernatur?
+//     </p>
+// </div>
+// <div class="shop__center-wrapper">
+//     <img class="shop__image" src="<%=require('../assets/images/mob_starter kit.png') %>" alt="" />
+//     <div class="center-wrapper">
+//         <button class="shop__button">Contact us</button>
+//     </div>
+// </div>
+// </section>

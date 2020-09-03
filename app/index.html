@@ -8,6 +8,43 @@
     </head>
     <body>
         <div class="container">
+            <!-- desktop -->
+            <nav class="navbar-desktop">
+                <div class="navbar-desktop__menu">
+                    <a href="#"> <img class="navbar-desktop__logo" src="<%=require('../assets/images/logo.png') %>" alt="" /></a>
+                    <div class="navbar-desktop__menu-desktop">
+                        <ul class="navbar-desktop__menu-list">
+                            <li class="navbar-desktop__list-element"><a class="navbar-desktop__item" href="">Zonifero products</a></li>
+                            <li class="navbar-desktop__list-element"><a class="navbar-desktop__item" href="">Store</a></li>
+                            <li class="navbar-desktop__list-element"><a class="navbar-desktop__item" href="">Blog</a></li>
+                            <li class="navbar-desktop__list-element">
+                                <a class="navbar-desktop__item" href="">
+                                    <div>
+                                        <img src="" alt="" />
+                                        <img src="" alt="" /></div
+                                ></a>
+                            </li>
+                            <li class="navbar-desktop__list-element"><a class="navbar-desktop__item" href="">Sign in</a></li>
+                            <li class="navbar-desktop__list-element"><a class="navbar-desktop__item" href="">Get the app</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="navbar-desktop__navigation">
+                    <div class="center-wrapper navbar-desktop__navigation-wrapper">
+                        <h4 class="navbar-desktop__navigation-header">zonifero WorkPlace:</h4>
+                        <div class="navbar-desktop__navigation-container">
+                            <ul class="navbar-desktop__menu-list">
+                                <li class="navbar-desktop__list-element"><a class="navbar-desktop__item nav-active-tab" href="">Overview</a></li>
+                                <li class="navbar-desktop__list-element"><a class="navbar-desktop__item" href="">Features</a></li>
+                                <li class="navbar-desktop__list-element"><a class="navbar-desktop__item" href="">Specs</a></li>
+                                <li class="navbar-desktop__list-element"><a class="navbar-desktop__item" href="">FAQ</a></li>
+                                <li class="navbar-desktop__list-element"><a class="navbar-desktop__item" href="">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <!-- mobile -->
             <nav class="center-wrapper navbar">
                 <a href="#"> <img class="navbar__logo" src="<%=require('../assets/images/logo-mobile.png') %>" alt="" /></a>
                 <div class="navbar__drawer-menu">
@@ -17,45 +54,45 @@
                 <img class="navbar__burger-menu" src="<%=require('../assets/images/ex_logo2.png') %>" alt="" />
             </nav>
             <section class="hero">
-                <div class="center-wrapper">
-                    <div class="hero__heading">
-                        <h1 class="hero__header">Streamline your workplace</h1>
-                        <img class="hero__image" src="<%=require('../assets/images/mob-hand.png') %>" alt="" />
-                    </div>
-
+                <div class="hero__wrapper center-wrapper">
+                    <h1 class="hero__header">Streamline your workplace</h1>
                     <h3 class="hero__description">Effectively and quickly from your mobile device. Staying connected has never been easier.</h3>
                     <div class="hero__button-container">
                         <div class="hero__button">google</div>
                         <div class="hero__button">app</div>
                     </div>
+                    <div class="hero__heading">
+                        <img class="hero__image" src="<%=require('../assets/images/mob-hand.png') %>" alt="" />
+                        <img class="hero__image--desktop" src="<%=require('../assets/images/mob-hand.png') %>" alt="" />
+                    </div>
                 </div>
             </section>
             <section class="target">
-                <div class="center-wrapper">
+                <div class="target__wrapper center-wrapper">
                     <div class="target__item">
                         <h2 class="target__header">Management</h2>
                         <p class="target__paragraph">
                             Tools for real-time management of all your facilities and people across multiple sites. Ease, speed and effectiveness of facilities communications.
                         </p>
                     </div>
-                    <div class="target__item inactive">
+                    <div class="target__item">
                         <h2 class="target__header">Employees</h2>
                         <p class="target__paragraph">
                             Tools for real-time management of all your facilities and people across multiple sites. Ease, speed and effectiveness of facilities communications.
                         </p>
                     </div>
-                    <div class="target__item inactive">
+                    <div class="target__item">
                         <h2 class="target__header">Visitors</h2>
                         <p class="target__paragraph">A smooth and welcoming visitor experience – easy navigation around your facilities.</p>
                     </div>
-                    <div class="target__input-field">
-                        <input class="target__input-control" type="radio" id="target-1" />
-                        <label for="target-1"><span></span></label>
-                        <input class="target__input-control" type="radio" id="target-2" />
-                        <label for="target-2"><span></span></label>
-                        <input class="target__input-control" type="radio" id="target-3" />
-                        <label for="target-3"><span></span></label>
-                    </div>
+                </div>
+                <div class="target__input-field">
+                    <input class="target__input-control" type="radio" id="target-1" />
+                    <label for="target-1"><span></span></label>
+                    <input class="target__input-control" type="radio" id="target-2" />
+                    <label for="target-2"><span></span></label>
+                    <input class="target__input-control" type="radio" id="target-3" />
+                    <label for="target-3"><span></span></label>
                 </div>
             </section>
             <section class="characteristic">
@@ -70,17 +107,9 @@
                             </div>
                             <h3 class="characteristic__header">Use your time and space smarter</h3>
                             <p class="characteristic__paragraph">Never again run out of coffee or other supplies. Create an efficient hive for your busy bees.</p>
-                            <div class="characteristic__input-field">
-                                <input class="characteristic__input-control" type="radio" id="characteristic-1" />
-                                <label for="characteristic-1"><span></span></label>
-                                <input class="characteristic__input-control" type="radio" id="characteristic-2" />
-                                <label for="characteristic-2"><span></span></label>
-                                <input class="characteristic__input-control" type="radio" id="characteristic-3" />
-                                <label for="characteristic-3"><span></span></label>
-                            </div>
                         </div>
                     </div>
-                    <div class="characteristic__card inactive">
+                    <div class="characteristic__card">
                         <div class="center-wrapper">
                             <div class="characteristic__image-wrapper">
                                 <img class="characterstic__image" src="<%=require('../assets/images/mob_roblem_solving.png') %>" alt="" />
@@ -88,12 +117,15 @@
                             <h3 class="characteristic__header">Never stress about meetings again</h3>
                             <p class="characteristic__paragraph">Zonifero will measure how you use the rooms so that you always have enough rooms available.</p>
                         </div>
-                        <div class="target__input-wrapper">
-                            <input type="radio" checked="{true}" />
-                            <input type="radio" />
-                            <input type="radio" />
-                        </div>
                     </div>
+                </div>
+                <div class="characteristic__input-field center-wrapper">
+                    <input class="characteristic__input-control" type="radio" id="characteristic-1" />
+                    <label for="characteristic-1"><span></span></label>
+                    <input class="characteristic__input-control" type="radio" id="characteristic-2" />
+                    <label for="characteristic-2"><span></span></label>
+                    <input class="characteristic__input-control" type="radio" id="characteristic-3" />
+                    <label for="characteristic-3"><span></span></label>
                 </div>
             </section>
             <section class="features">
@@ -103,7 +135,7 @@
                 <div class="features__wrapper">
                     <div class="features__background"></div>
                     <div class="features__content">
-                        <div class="center-wrapper">
+                        <div class="center-wrapper features__text">
                             <h1 class="features__header">Hot desk bookin. Like a pro.</h1>
                             <p class="features__paragraph">
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tristique velit id finibus convallis. Fusce eget purus aliquet libero euismod blandit
@@ -113,6 +145,7 @@
                         <button class="features__button center-wrapper">View and download full specs</button>
                         <div class="features__slider">
                             <img class="features__mobile" src="<%=require('../assets/images/mob_mobile.png') %>" alt="" />
+                            <img class="features__mobile--desktop" src="<%=require('../assets/images/Silver.png') %>" alt="" />
                             <div class="features__arrows">
                                 <img class="features__arrow" src="<%=require('../assets/images/left-arrow.png') %>" alt="" />
                                 <img class="features__arrow" src="<%=require('../assets/images/right-arrow.png') %>" alt="" />
@@ -165,12 +198,17 @@
             </section>
             <section class="innovation">
                 <div class="center-wrapper">
-                    <h2 class="innovation__header">Bring your building back to 21st century</h2>
-                    <h3 class="innovation__description">
-                        The IoT allows your office to be sensed or controlled remotely across existing network infrastructure. Track and analyse workplace performance to gain your
-                        office efficiency. Maecenas vitae enim pulvinar, gravida ligula et, semper neque.
-                    </h3>
-                    <img class="innovation__image" src="<%=require('../assets/images/mob_czujka.png') %>" alt="" />
+                    <div class="innovation__heading">
+                        <div class="innovation__text">
+                            <h2 class="innovation__header">Bring your building back to 21st century</h2>
+                            <h3 class="innovation__description">
+                                The IoT allows your office to be sensed or controlled remotely across existing network infrastructure. Track and analyse workplace performance to
+                                gain your office efficiency. Maecenas vitae enim pulvinar, gravida ligula et, semper neque.
+                            </h3>
+                        </div>
+                        <img class="innovation__image--desktop" src="<%=require('../assets/images/Layer 59.png') %>" alt="" />
+                        <img class="innovation__image" src="<%=require('../assets/images/mob_czujka.png') %>" alt="" />
+                    </div>
                     <h3 class="innovation__header--item">Sensors</h3>
                     <p class="innovation__paragraph">
                         The integration of zonifero with motion sensors allows dynamic display of occupancy of rooms and desks on the map. The functionality is especially useful in
@@ -189,18 +227,18 @@
                 </div>
             </section>
             <section class="shop">
-                <div class="center-wrapper">
+                <div class="center-wrapper shop__text-wrapper">
                     <h2 class="shop__header">Shop zonifero accessories</h2>
                     <p class="shop__paragraph">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Et natus aut doloribus reiciendis similique quibusdam, nihil odit adipisci iusto facere
                         reprehenderit consequatur, tenetur qui neque ipsum ex cupiditate architecto aspernatur?
                     </p>
                 </div>
-                <div class="shop__center-wrapper">
+                <div class="shop__image-wrapper">
                     <img class="shop__image" src="<%=require('../assets/images/mob_starter kit.png') %>" alt="" />
-                    <div class="center-wrapper">
-                        <button class="shop__button">Contact us</button>
-                    </div>
+                </div>
+                <div class="center-wrapper shop__button-wrapper">
+                    <button class="shop__button">Contact us</button>
                 </div>
             </section>
             <section class="contact">
@@ -212,8 +250,8 @@
                         </ul>
                     </nav>
 
-                    <div class="contact__form">
-                        <form action="#" method="POST">
+                    <form action="#" method="POST">
+                        <div class="contact__form">
                             <div class="contact__form-field">
                                 <label class="contact__form-label contact__form-required" for="regform-name">First name</label>
                                 <div class="contact__form-control-wrapper">
@@ -270,10 +308,10 @@
                                     <div class="contact__form-error">wypełnij pole poprawnie</div>
                                 </div>
                             </div>
-                        </form>
-                        <div class="contact__form-button-container">
-                            <button class="contact__form-button">Send message</button>
                         </div>
+                    </form>
+                    <div class="contact__form-button-container">
+                        <button class="contact__form-button">Send message</button>
                     </div>
                 </div>
             </section>

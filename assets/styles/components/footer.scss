@@ -1,6 +1,11 @@
 .footer {
     background-color: $product-color;
 
+    &__navigation {
+        @media (min-width: 760px) {
+            display: flex;
+        }
+    }
     &__list-header {
         @include section-header;
         font-weight: $bold;
@@ -22,12 +27,19 @@
 
     &__list {
         margin-top: $large;
+        @media (min-width: 760px) {
+            margin-right: $xx-large;
+        }
     }
 
     &__signature {
         display: flex;
         align-items: flex-end;
         justify-content: flex-end;
+
+        @media (min-width: 760px) {
+            align-items: flex-start;
+        }
     }
 
     &__dividing-line {
